@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Weather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid text-center id="main-container">
+    <ion-row>
+        <ion-col>
+            <ion-icon name="person" class="icon-class"></ion-icon>
+            <div class="welcome">Welcome !</div>
+            <div class="title-header">To Weather App</div>
+        </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <button ion-button round outline class="weather-button-container" text-center (click)="goToDisplayWeatherPage()">
+        <ion-icon name="cloud" color="dark" class="cloud-class"></ion-icon>Check Weather
+      </button>
+    </ion-row>
+</ion-grid>
+</ion-content>

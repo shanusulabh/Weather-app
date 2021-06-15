@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row id="input-container">
+      <ion-col col-9>
+        <ion-item>
+          <ion-input placeholder="Enter City Name" [(ngModel)]="city" type="text" (ngModelChange)="inputCity()"></ion-input>
+        </ion-item>
+        <div *ngIf="isErrorExists" class="error-msg">{{errorText}}</div>
+      </ion-col>
+      <ion-col col-3>
+        <button ion-button round outline class="search-button" (click)="searchReport()">
+          <ion-icon name="search" color="dark"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<ion-grid *ngIf="displayWeatherData">
+  <ion-row>
+    <ion-card class="card-class">
+      <ion-card-content>
+        <ion-card-title>
+          {{cityName}} Weather Report 
+          </ion-card-title>
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-start clear small>
+                <span class="temp">{{currentTemp}} <sup>o</sup> c</span>
+              </button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-start clear small>
+                <ion-icon name="arrow-round-up"></ion-icon>
+                <div>{{maxTemp}} <sup>o</sup> c</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-start clear small>
+                <ion-icon name="arrow-round-down"></ion-icon>
+                <div>{{minTemp}} <sup>o</sup> c</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-start clear small>
+                <div>Humid: {{humidity}} %</div>
+              </button>
+            </ion-col>
+          </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+</ion-grid>
+</ion-content>

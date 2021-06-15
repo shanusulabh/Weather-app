@@ -1,0 +1,28 @@
+page-display-weather {
+    #input-container{
+        ion-item{
+            border-bottom: none;
+            border: 2px solid #005F6F;
+            border-radius: 13px;
+            ion-input{
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+        .error-msg {
+            color: red;
+            padding: 7px;
+        }
+        .search-button {
+            margin-top: 12px;
+            float: right;
+        }
+    }
+    .card-class {
+        border-radius: 17px;
+    }
+    .temp {
+        color: gray;
+        font-size: 18px;
+    }
+}

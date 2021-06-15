@@ -1,0 +1,29 @@
+page-welcome-user {
+    #main-container {
+        background: #f8f8f8;
+        border-radius: 15px;
+        .icon-class {
+            font-size:70px;
+        }
+        .welcome {
+            color: #343434;
+            font-weight: 400;
+            font-size: 1.8rem;
+            padding: 4px 0;
+        }
+        .title-header {
+            color: #343434;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 4px 0;
+        }
+        .weather-button-container {
+            background-color: #e9fafd;
+            border-color: #cdf6fd;
+            color: black;
+        }
+        .cloud-class {
+            padding-right: 8px;
+        }
+      }
+}
